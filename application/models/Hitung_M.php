@@ -72,7 +72,11 @@ class Hitung_M extends CI_Model {
 
 	}
 
-
+	public function getTotalGaji()
+	{
+		$totalGaji = $this->getGapok() + $this->getTunjangan() + $this->getPotongan();
+		return $totalGaji;
+	}
 	
 
 	// public function getTunjangan()
